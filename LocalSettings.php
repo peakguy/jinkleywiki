@@ -58,10 +58,9 @@ $wgEmailAuthentication = true;
 
 ## Database settings
 $wgDBtype = "sqlite";
-$wgDBserver = "postgresql://wikiuser:h3KdCinLlyYBXgFkyRyvk1pQ3p8WCbJN@dpg-d5v4mcggjchc7392e1d0-a.oregon-postgres.render.com/wikidb_zjf0";
-$wgDBname = "wikidb_zjf0";
-$wgDBuser = "";
-$wgDBpassword = "";
+$wgDBserver = "";           // SQLite doesn’t use a host
+$wgDBname = "/var/www/html/wiki.sqlite";  // Full path to your SQLite file
+$wgSQLiteBusyTimeout = 5000; // Optional: wait 5s if the DB is locked
 
 # SQLite-specific settings
 $wgSQLiteDataDir = "/var/www/data";
